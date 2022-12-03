@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "demojavaspring",
+  "private_key_id": "931ff8c70d7c6afb73c4caf6876649ca680b491d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCm0ZGtgjNr2gfq\njzrQeMpZicNV3DW38gpe7qeVNGy3vKpJjDjZox59AuQYaJCQuBQZpKOpUmJn0+mf\nteaeHWHABnZgJif/AEtSdfLQAxTdwCeDtcD8S9jB5sFEqahjvoHf7/j0MSeDpO6c\nPXqrvxFLV8LoKbrFt4TyqsuPCRL0tFr8EP5a38ybTLK5zHu8bmNnQsXJfGl8hWqv\nXRvOT4wF/QlpvLp0gR+x6ENvSwW6O6trYZYTlEiXsD5gi4WJEo6uRxZtVnPzF8ja\nI0kwGxMG46+K8fzxM/MmB/N/mdCuAtXUhdt0S9j6qbjnNi3k8oqYhZ/6aCRTy65E\ngzuaiPL3AgMBAAECggEAHqp0xLgkGsX0YZad4bfqvsX37h8yktOAO45UqTV/bNFW\nXnnT85IsZx+ybZg/RxNHwqUE3voBlAOdNVpbgCJ3lzS46xjojlRwBEMhdUKzwcXy\nnaA6T0bkHFT+n1Au39MkDdYP5lfo4ybdJESa+dqAY+DIuCP/rRv86R0jmXI6FViM\nQvTBvbem8YtVlgj2Na4uz66rkdfr14z7ploZ7xF0jnz0cDWz/wLyZvvk3R+IO+aI\nSye4w808g+1siwzsg6Six67OdG11rvwmIUJgYmzxHeCNg0WQYWe6thq1pvfm27N5\nM6V+3gzdoeC1TXK/zda2FfyPJEWXBRspRil0xDNaBQKBgQDVVg9lNKVockvTnhyj\nwqG5DClKzToE/BKk3OFMrxMRPlee3n4hVTa4p268AbgWML+fFOj4GyC8d9RNLo8Z\nkSn/NCHTWo9deSwU5MtbDtyT4mb4erHnsMWnSIaBPLjqU7+hCM6btLAFlxFlgb0t\nca5g9oQ1G+nHRp2bt6+9j4MkfQKBgQDILgA5Nar8ygYroR7QARnSUWDfWF1CHwDM\nXB7Arfg5dgGjrfku5I8aYsUCbcR1xRKFOzKMqZso6InANKoEEaNXvojKWf8LllLo\nciaQsMwD/GLjlZZqVY+UreNIbamlGBMkfrx/Tc20VABhHrufkrxsmHYob+A4d38h\nUnMbfxgTgwKBgQDABjzJTf/s6aRTEKiaxqAnHkk0qVGmFvb5KlApZBT3mnPn7kD9\n4+PjheHonGuEndB9cqbYXCK1Qe74ogXwb3er3NLtmUAeVOlWzTI1/kSRYGJrGpV0\nBOuETYW0YmHXmhaM7o56HMOr5HSmN4d+lirt4DbUTxG4a1mGRmqLZ9gVSQKBgCFZ\nOIRPYor2hQyjrORuKoUVNZQ/vlmTnKhu+FiVIvM/q4o/I3IidYypw7Rh4QbVq/4y\nHHu+jbDE/J3eqCxBW/r0LQm48HpXsrwyuCYGrhZD552OgB563o6gYWrhig+M8TN1\nQaXbqldOXznOyucMpQNaauTVrn75uV4txCtigvpNAoGAabML61XQ6gutfVFs8Lw5\nt2ZgrgdyHXzGJOdEntsoy+AoHMolfkoed1C4Mk/QUABd3sDE1TpG2u8y8U8YcRWf\n/lBv+zD8IP7xL7FfLcG04SbVtClvy8QSmQjo74IbgwcpbjnJ8Hkz5/9Dya5eAXHJ\n8ShVjPxYxUj68iZ2ZSRd1Sw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "demojavaspring@appspot.gserviceaccount.com",
+  "client_id": "103265018693740763231",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/demojavaspring%40appspot.gserviceaccount.com"
+}

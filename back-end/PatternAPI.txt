@@ -1,0 +1,83 @@
+
+===============================================================================================
+PRODUCT: /api/products
+    @POST
+	http://118.69.69.160:1200/api/products/add_product
+		name: 		(String)
+		des:  		(String)
+		price:		(double)
+		amount:		(int)
+		imageFiles[]: (file)
+		categoryId[]: (int)
+
+	@GET
+	http://118.69.69.160:1200/api/products/get_all_product
+	@PUT
+	http://118.69.69.160:1200/api/products/update_product/{id}
+	        name: 		(String)
+    		des:  		(String)
+    		price:		(double)
+    		amount:		(int)
+    		imageFiles[]: (file)
+    		categoryId[]: (int)
+
+	@DELETE
+	http://118.69.69.160:1200/api/products/delete_product/{id}
+	@GET
+	http://118.69.69.160:1200/api/products/search_product
+		amount_from:	(int)
+		amount_to:		(int)
+		product_name:	(String)
+		price_from:		(double)
+		price_to:		(double)
+		category_id     (int)
+	SEARCH THEO ĐIỀU KIỆN AND --VÍ DỤ : amount_from VÀ amount_to, product_name VÀ price_from
+
+	@GET
+	http://118.69.69.160:1200/api/products/get_product/{id}
+	@GET
+	http://118.69.69.160:1200/api/products/get_product_new
+	@GET
+	http://118.69.69.160:1200/api/products/get_product_hot
+	@GET
+	http://118.69.69.160:1200/api/products/get_product_by_category/{categoryId}
+
+===============================================================================================
+CATEGORIES: /api/categories
+    @GET
+    http://118.69.69.160:1200/api/categories/get_all_category
+    @POST
+    http://118.69.69.160:1200/api/categories/add_category
+        name:       (String)
+
+    @PUT
+	http://118.69.69.160:1200/api/categories/update_category/{id}
+	    name:       (String)
+
+    @DELETE
+    http://118.69.69.160:1200/api/categories/delete_category/{id}
+
+    @GET
+    http://118.69.69.160:1200/api/categories/search_category
+        name:       (String)
+					
+	@GET
+    http://118.69.69.160:1200/api/categories/get_category/{id}
+
+===============================================================================================
+USER: /api/users
+    @GET
+    http://118.69.69.160:1200/api/users/get_user
+
+    @POST
+    http://118.69.69.160:1200/api/users/register
+        email
+        password
+        fullName
+        phone
+        address
+
+
+					
+					
+					
