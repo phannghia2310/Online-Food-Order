@@ -44,7 +44,7 @@ public class MailServiceImp implements MailService {
                 mailSender.send(mimeMessage);
                 isSendMail[0] = true;
             } catch (MessagingException e) {
-                log.error("ERROR SEND MAIL METHOD sendEnmail : ", e);
+                log.error("ERROR SEND MAIL METHOD send Email : ", e);
                 isSendMail[0] = false;
             }
         }).start();
