@@ -18,8 +18,6 @@ public class Product {
     private String productName;
     @Column(name = "product_price", nullable = false)
     private double productPrice;
-    @Column(name = "product_mass", nullable = false)
-    private double productMass;
     @Column(name = "product_des")
     private String productDes;
     @Column(name = "product_amount", nullable = false)
@@ -100,14 +98,6 @@ public class Product {
 
     public void setImages(List<Image> images) {
         this.images = images;
-    }
-
-    public double getProductMass() {
-        return productMass;
-    }
-
-    public void setProductMass(double productMass) {
-        this.productMass = productMass;
     }
 
     public int getAmountSold() {

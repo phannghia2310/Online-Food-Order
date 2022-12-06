@@ -120,7 +120,7 @@ public class BillControllerImp implements BillController {
             billDetailDTO.setFeeShip(bill.getFeeShip());
             String dateString = Utils.formatDate(bill.getPurchaseDate().getTime());
             billDetailDTO.setPurchaseDate(dateString);
-            billDetailDTO.setUserResponse(new UserResponseDTO(user.getEmailId(), user.getPhone(), user.getFullname(), user.getAddress(), user.getRole().getRoleName(), purchaseInvoice));
+            billDetailDTO.setUserResponse(new UserResponseDTO(user.getEmailId(), user.getPhone(), user.getFullname(), user.getAddress(), user.getRole().getRoleName(), purchaseInvoice, user.getRegistraionDate().toString()));
             result.add(billDetailDTO);
             return ResponseEntity.status(HttpStatus.OK).body(new ResponseDTO(200, "THÀNH CÔNG!", result));
         }
@@ -199,7 +199,6 @@ public class BillControllerImp implements BillController {
                     billInfo.setProduct(product);
                     billInfo.setAmount(billInfoDTO.getAmount());
                     price = price.add(BigDecimal.valueOf((billInfoDTO.getAmount() * product.getProductPrice())));
-                    fee = fee.add(BigDecimal.valueOf(product.getProductMass()).multiply(FEE));
                     billInfoService.createBillInfo(billInfo);
                     product.setProductAmount(product.getProductAmount() - billInfoDTO.getAmount());
                     product.setAmountSold(product.getAmountSold() + billInfoDTO.getAmount());

@@ -51,6 +51,7 @@ function AccountManagement(props) {
                         <th>Phone</th>
                         <th>Address</th>
                         <th>PurchaseInvoice</th>
+                        <th>Registration Date</th>
                      </tr>
                   </thead>
                   <tbody>
@@ -64,6 +65,7 @@ function AccountManagement(props) {
                                  <td>{value.phone}</td>
                                  <td>{value.address}</td>
                                  <td>{value.purchaseInvoice}</td>
+                                 <td>{value.registrationDate}</td>
                               </tr>
                            );
                         })

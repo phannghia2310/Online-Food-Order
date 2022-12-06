@@ -24,7 +24,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import static com.example.backendjavaspring.model.Constants.*;
@@ -52,6 +54,8 @@ public class UserControllerImp implements UserController {
 
     @Override
     public ResponseEntity<?> addUser(UserRequestDTO userRequest) {
+        Date date = new Date();
+        Timestamp timestamp = new Timestamp(date.getTime());
         try {
             Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
             if (userRequest.getPassword() == null || userRequest.getPassword().isEmpty()) {
@@ -71,17 +75,17 @@ public class UserControllerImp implements UserController {
                 User userFromToken = myUserDetail.getUser();
                 if (userFromToken.getRole().getRoleId() == ROLE_ADMIN_ID) {
                     Role role = roleService.findRoleById(ROLE_ADMIN_ID);
-                    User user = new User(userRequest.getEmail(), userRequest.getFullName(), userRequest.getPassword(), userRequest.getAddress(), userRequest.getPhone(), role);
+                    User user = new User(userRequest.getEmail(), userRequest.getFullName(), userRequest.getPassword(), userRequest.getAddress(), userRequest.getPhone(), role, timestamp);
                     userService.createUser(user);
                 } else {
                     Role role = roleService.findRoleById(ROLE_USER_ID);
-                    User user = new User(userRequest.getEmail(), userRequest.getFullName(), userRequest.getPassword(), userRequest.getAddress(), userRequest.getPhone(), role);
+                    User user = new User(userRequest.getEmail(), userRequest.getFullName(), userRequest.getPassword(), userRequest.getAddress(), userRequest.getPhone(), role, timestamp);
                     userService.createUser(user);
                 }
 
             } else {
                 Role role = roleService.findRoleById(ROLE_USER_ID);
-                User user = new User(userRequest.getEmail(), userRequest.getFullName(), userRequest.getPassword(), userRequest.getAddress(), userRequest.getPhone(), role);
+                User user = new User(userRequest.getEmail(), userRequest.getFullName(), userRequest.getPassword(), userRequest.getAddress(), userRequest.getPhone(), role, timestamp);
                 userService.createUser(user);
             }
 
@@ -107,6 +111,7 @@ public class UserControllerImp implements UserController {
                 userResponse.setFullName(userFromToken.getFullname());
                 userResponse.setPhone(userFromToken.getPhone());
                 userResponse.setRole(userFromToken.getRole().getRoleName());
+                userResponse.setRegistrationDate(userFromToken.getRegistraionDate().toString());
                 return ResponseEntity.status(HttpStatus.OK).body(userResponse);
             } else {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("NGƯỜI DÙNG CHƯA ĐƯỢC XÁC THỰC HOẶC HẾT HẠN!");
@@ -155,6 +160,7 @@ public class UserControllerImp implements UserController {
             userResponse.setPhone(user.getPhone());
             userResponse.setRole(user.getRole().getRoleName());
             userResponse.setPurchaseInvoice(purchaseInvoice);
+            userResponse.setRegistrationDate(user.getRegistraionDate().toString());
             result.add(userResponse);
         }
         return ResponseEntity.status(HttpStatus.OK).body(new ResponseDTO(200, "THÀNH CÔNG!", result));

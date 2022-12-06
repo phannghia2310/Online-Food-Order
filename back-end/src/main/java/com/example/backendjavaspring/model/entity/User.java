@@ -4,6 +4,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import java.sql.Date;
+import java.sql.Time;
+import java.sql.Timestamp;
 
 @Entity(name = "users")
 public class User {
@@ -20,15 +23,18 @@ public class User {
     private String phone;
     @OneToOne
     private Role role;
+    @Column(nullable = false)
+    private Timestamp RegistraionDate;
 
 
-    public User( String emailId, String fullname, String password, String address, String phone, Role role) {
+    public User(String emailId, String fullname, String password, String address, String phone, Role role, Timestamp RegistrationDate) {
         this.emailId = emailId;
         this.fullname = fullname;
         this.password = password;
         this.address = address;
         this.phone = phone;
         this.role = role;
+        this.RegistraionDate = RegistrationDate;
     }
 
     public User() {
@@ -81,4 +87,8 @@ public class User {
     public void setRole(Role role) {
         this.role = role;
     }
+
+    public Timestamp getRegistraionDate() { return RegistraionDate;}
+
+    public void setRegistraionDate(Timestamp RegistraionDate) {this.RegistraionDate=RegistraionDate;}
 }

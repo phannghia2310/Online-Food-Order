@@ -189,7 +189,6 @@ public class ProductControllerImp implements ProductController {
             productDTO.setAmountSold(product.getAmountSold());
             productDTO.setCreateDate(product.getCreateDate());
             productDTO.setImages(product.getImages());
-            productDTO.setProductMass(product.getProductMass());
             List<ProductCategory> productCategories = productCategoryService.findProductCategoryByProductId(product.getProductId());
             List<Category> categories = new ArrayList<>();
             for (ProductCategory productCategory : productCategories) {

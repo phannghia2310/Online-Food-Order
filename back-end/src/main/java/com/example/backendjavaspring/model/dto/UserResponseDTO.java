@@ -1,5 +1,7 @@
 package com.example.backendjavaspring.model.dto;
 
+import java.sql.Timestamp;
+
 public class UserResponseDTO {
 	private String email;
 	private String phone;
@@ -8,17 +10,20 @@ public class UserResponseDTO {
 	private String role;
 	private int purchaseInvoice;
 
+	private String registrationDate;
+
 	public UserResponseDTO() {
 	}
 
 	public UserResponseDTO(String email, String phone, String fullName, String address, String role,
-			int purchaseInvoice) {
+			int purchaseInvoice, String registrationDate) {
 		this.email = email;
 		this.phone = phone;
 		this.fullName = fullName;
 		this.address = address;
 		this.role = role;
 		this.purchaseInvoice = purchaseInvoice;
+		this.registrationDate = registrationDate;
 	}
 
 	public String getEmail() {
@@ -69,4 +74,11 @@ public class UserResponseDTO {
 		this.purchaseInvoice = purchaseInvoice;
 	}
 
+	public String getRegistrationDate() {
+		return registrationDate;
+	}
+
+	public void setRegistrationDate(String registrationDate) {
+		this.registrationDate = registrationDate;
+	}
 }
